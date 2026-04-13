@@ -1,0 +1,42 @@
+name: Gerar Digest Sueco
+
+on:
+  schedule:
+    # Toda segunda-feira às 07:00 CET (06:00 UTC)
+    - cron: '0 6 * * 1'
+    # Toda quinta-feira às 07:00 CET (06:00 UTC)
+    - cron: '0 6 * * 4'
+  # Permite rodar manualmente pela interface do GitHub
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  gerar-digest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: pip install anthropic
+
+      - name: Gerar o digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/generate_digest.py
+
+      - name: Publicar index.html no GitHub Pages
+        run: |
+          git config user.name  "Digest Sueco Bot"
+          git config user.email "digest-bot@noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "Digest · $(date '+%d/%m/%Y')"
+          git push

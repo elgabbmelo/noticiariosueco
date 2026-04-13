@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digest Sueco — 9 de abril de 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,600;1,8..60,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #e8e0d0;
+    --paper: #16130e;
+    --paper-dark: #1f1a12;
+    --paper-mid: #262018;
+    --rust: #d96b3a;
+    --gold: #d4a44a;
+    --slate: #a8b8cc;
+    --muted: #7a7060;
+    --divider: #3a3228;
+    --left: #5b9bd6;
+    --center-left: #4ab0c0;
+    --center: #7aaa50;
+    --center-right: #c8a040;
+    --right: #d96b3a;
+    --neutral: #909090;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 16px;
+    line-height: 1.75;
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 28px 100px;
+  }
+
+  .masthead {
+    text-align: center;
+    padding: 52px 0 28px;
+    border-bottom: 3px double var(--divider);
+    margin-bottom: 28px;
+  }
+
+  .masthead-eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 9vw, 72px);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 0.95;
+  }
+
+  .masthead h1 em {
+    color: var(--rust);
+    font-style: italic;
+  }
+
+  .masthead-meta {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .masthead-meta span {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+  }
+
+  .masthead-meta span::before { content: '◆ '; color: var(--divider); }
+
+  /* LEGEND */
+  .legend {
+    background: var(--paper-dark);
+    border: 1px solid var(--divider);
+    border-radius: 3px;
+    padding: 14px 18px;
+    margin-bottom: 40px;
+  }
+
+  .legend-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .legend-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+  }
+
+  .ldot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+  .ldot.l  { background: var(--left); }
+  .ldot.cl { background: var(--center-left); }
+  .ldot.c  { background: var(--center); }
+  .ldot.cr { background: var(--center-right); }
+  .ldot.r  { background: var(--right); }
+  .ldot.n  { background: var(--neutral); }
+
+  /* SECTION DIVIDER */
+  .section-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    color: var(--muted);
+    text-align: center;
+    margin: 44px 0 36px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-title::before, .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--divider);
+  }
+
+  /* STORY */
+  .story {
+    margin-bottom: 64px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid var(--divider);
+    animation: fadeUp 0.6s ease both;
+  }
+  .story:last-child { border-bottom: none; }
+
+  @keyframes fadeUp {
+    from { opacity:0; transform:translateY(18px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+  .story:nth-child(1){ animation-delay:.10s }
+  .story:nth-child(2){ animation-delay:.20s }
+  .story:nth-child(3){ animation-delay:.30s }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    padding: 3px 9px;
+    border-radius: 2px;
+    color: white;
+  }
+  .tag.economia { background: #2a7a3a; }
+  .tag.politica { background: #1a4a8a; }
+  .tag.migracao { background: #6b3a9a; }
+
+  .story-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 4.5vw, 34px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -0.015em;
+  }
+
+  .story-body p {
+    font-size: 16.5px;
+    margin-bottom: 18px;
+    line-height: 1.82;
+  }
+  .story-body p:last-child { margin-bottom: 0; }
+
+  .story-body > p:first-child::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.2em;
+    font-weight: 700;
+    float: left;
+    line-height: 0.72;
+    margin: 0.05em 0.12em 0 0;
+    color: var(--rust);
+  }
+
+  .pull {
+    margin: 28px 0;
+    padding: 18px 24px;
+    border-left: 4px solid var(--rust);
+    background: var(--paper-dark);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 17.5px;
+    color: var(--slate);
+    line-height: 1.6;
+  }
+
+  /* CONTEXT */
+  .context {
+    margin-top: 30px;
+    background: var(--paper-mid);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .context-header {
+    background: var(--gold);
+    padding: 9px 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .context-body {
+    padding: 18px 20px 16px;
+  }
+
+  .context-body p {
+    font-size: 14.5px;
+    color: var(--slate);
+    line-height: 1.72;
+    margin-bottom: 12px;
+  }
+  .context-body p:last-child { margin-bottom: 0; }
+
+  /* SOURCES */
+  .sources {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--divider);
+  }
+
+  .sources-header {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+
+  .source-row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 14px;
+    align-items: start;
+    margin-bottom: 13px;
+  }
+
+  .sbadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 3px;
+    white-space: nowrap;
+    border: 1.5px solid;
+    line-height: 1.4;
+  }
+
+  .sbadge .sdot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+
+  .sbadge.l  { color: var(--left);         border-color: var(--left);         background: rgba(37,99,168,.07); }
+  .sbadge.cl { color: var(--center-left);  border-color: var(--center-left);  background: rgba(42,122,138,.07); }
+  .sbadge.c  { color: var(--center);       border-color: var(--center);       background: rgba(90,122,58,.07); }
+  .sbadge.cr { color: var(--center-right); border-color: var(--center-right); background: rgba(138,96,16,.07); }
+  .sbadge.r  { color: var(--right);        border-color: var(--right);        background: rgba(184,74,30,.08); }
+  .sbadge.n  { color: var(--neutral);      border-color: var(--neutral);      background: rgba(107,107,107,.07); }
+
+  .source-note {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.57;
+    padding-top: 2px;
+  }
+
+  .source-note strong {
+    color: var(--slate);
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 3px double var(--divider);
+  }
+  .footer-orn {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--divider);
+    letter-spacing: 14px;
+    margin-bottom: 16px;
+  }
+  .footer p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+
+  @media (max-width: 580px) {
+    .wrapper { padding: 0 16px 64px; }
+    .masthead { padding: 36px 0 20px; }
+    .source-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header class="masthead">
+    <div class="masthead-eyebrow">Edição diária · Suécia em português</div>
+    <h1>Digest <em>Sueco</em></h1>
+    <div class="masthead-meta">
+      <span>9 de abril de 2026</span>
+      <span>Göteborg → Brasil</span>
+      <span>4 notícias</span>
+    </div>
+  </header>
+
+  <div class="legend">
+    <div class="legend-title">Escala de posicionamento político das fontes suecas</div>
+    <div class="legend-items">
+      <div class="legend-item"><span class="ldot l"></span> Esquerda</div>
+      <div class="legend-item"><span class="ldot cl"></span> Centro-esquerda</div>
+      <div class="legend-item"><span class="ldot c"></span> Centro / Público / Técnico</div>
+      <div class="legend-item"><span class="ldot cr"></span> Centro-direita</div>
+      <div class="legend-item"><span class="ldot r"></span> Direita</div>
+      <div class="legend-item"><span class="ldot n"></span> Institucional / Sem viés declarado</div>
+    </div>
+  </div>
+
+  <div class="section-title">Destaques desta semana</div>
+
+
+  <!-- ═══════════════════════════════════
+       NOTÍCIA 1: MATMOMS / SVT
+  ═══════════════════════════════════ -->
+  <article class="story">
+    <div class="story-meta">
+      <span class="tag economia">Economia</span>
+      <span class="story-date">1 abr 2026 · SVT Nyheter</span>
+    </div>
+    <h2>A sänkta matmomsen chegou às prateleiras — mas a alegria vem com ressalvas</h2>
+
+    <div class="story-body">
+      <p>
+        Desde o dia 1º de abril, o IVA sobre alimentos na Suécia foi cortado de 12% para 6% — uma medida temporária que o governo Kristersson prometeu durante a campanha eleitoral de 2022 e que finalmente entrou em vigor. Em uma rede de supermercados em Estocolmo, o dia foi agitado: foram trocados 8.500 cartazes de preços, e a loja precisou chamar funcionários extras para dar conta da mudança antes da abertura.
+      </p>
+      <p>
+        — Foi um dia muito corrido. São 8.500 cartazes para trocar — disse o gerente Simon Wangel ao SVT.
+      </p>
+      <p>
+        A redução vale para alimentos comprados em supermercados e para take away. Quem come no restaurante, no entanto, paga a mesma alíquota de antes — 12% — porque o governo entende que o serviço de mesa faz parte do preço. Isso irritou os donos de restaurantes, que agora convivem com uma situação paradoxal: a mesma pizza tem IVA diferente dependendo de se você come sentado ou leva embora.
+      </p>
+
+      <div class="pull">
+        "Isso joga areia na engrenagem de forma geral. Já atingiu os agricultores suecos em alto grau." — Carl Eckerdal, economista-chefe da Livsmedelsföretagen, sobre o impacto do conflito no Oriente Médio sobre os produtores de alimentos
+      </div>
+
+      <p>
+        O problema, segundo a reportagem do SVT, é que a sänkta matmoms chegou ao mesmo tempo que os efeitos da guerra no Oriente Médio começam a apertar as cadeias de produção alimentar. Frutas, legumes e verduras devem sentir o impacto antes dos produtos industrializados, por terem contratos mais curtos com fornecedores. Os supermercados, pressionados a mostrar que estão repassando o benefício, acabam apertando os produtores: o recado implícito é que sejam eles a absorver os aumentos de custo, pelo menos por enquanto.
+      </p>
+      <p>
+        Ulrika Dahlin, da associação Svensk Dagligvaruhandel, que representa as redes de supermercados, reconheceu a tensão: "É claro que queremos mostrar que estamos reduzindo os preços", disse. Mas admitiu que a discussão sobre quem arca com o custo dos aumentos de produção "é constante."
+      </p>
+      <p>
+        O governo havia criado em novembro de 2025 uma <em>matpriskommission</em> — comissão de preços alimentares — formada pela Agência do Consumidor e pelo Instituto de Conjuntura (Konjunkturinstitutet), com o objetivo de monitorar se as lojas estão de fato repassando a redução ao consumidor. A comissão entregou seu primeiro relatório ainda antes da medida entrar em vigor, sinalizando que não havia "sinais claros de desvio do padrão histórico" nos preços, mas que continuaria acompanhando — com próximo relatório previsto para setembro.
+      </p>
+    </div>
+
+    <div class="context">
+      <div class="context-header">Contexto &amp; Fontes Usadas</div>
+      <div class="context-body">
+        <p>
+          A redução do IVA alimentar é a medida mais visível do orçamento 2026 do governo de centro-direita. Tem apoio político amplo — partidos de esquerda também queriam reduzir preços de alimentos, mas por outros mecanismos (controle de mercado, subsídios diretos). A crítica da esquerda, especialmente dos Social-Democratas (S), é que o corte de IVA é menos eficiente socialmente do que uma intervenção dirigida, pois beneficia proporcionalmente mais quem gasta mais em alimentos — ou seja, quem tem renda mais alta.
+        </p>
+        <p>
+          Para quem mora em Gotemburgo: o impacto já está aparecendo nas etiquetas. Se você ainda não percebeu diferença no seu supermercado, vale checar especificamente produtos como legumes e derivados de leite. A comissão de preços tem poderes de monitoramento, mas não de punição direta.
+        </p>
+
+        <div class="sources">
+          <div class="sources-header">Fontes lidas diretamente nesta notícia</div>
+
+          <div class="source-row">
+            <span class="sbadge c"><span class="sdot" style="background:var(--center)"></span>SVT Nyheter</span>
+            <span class="source-note"><strong>Artigo lido: "I dag sänks matmomsen – men pris-oron består", 1 abr 2026.</strong> Televisão pública sueca. Editorialmente independente por lei, financiada por taxa pública (não publicidade). Tende ao centro, com esforço declarado de opartiskhet (imparcialidade). Neste artigo, o SVT ouviu tanto a indústria alimentar quanto os supermercados, sem tomar partido.</span>
+          </div>
+
+          <div class="source-row">
+            <span class="sbadge c"><span class="sdot" style="background:var(--center)"></span>SVT Nyheter</span>
+            <span class="source-note"><strong>Artigo lido: "Inför sänkningen av matmomsen – matpriskommissionen lämnar över rapport", fev 2026.</strong> Mesmo veículo, cobertura do relatório da comissão de preços antes da entrada em vigor da medida. Inclui a avaliação técnica do Konjunkturinstitutet.</span>
+          </div>
+
+          <div class="source-row">
+            <span class="sbadge n"><span class="sdot" style="background:var(--neutral)"></span>Regeringen.se</span>
+            <span class="source-note">Portal oficial do governo sueco. Usado para confirmar os termos da lagrådsremiss e as declarações do ministro Erik Slottner (KD). Fonte primária institucional, sem viés editorial — mas reflete naturalmente a posição do governo.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+  <!-- ═══════════════════════════════════
+       NOTÍCIA 2: UPPEHÅLLSTILLSTÅND
+  ═══════════════════════════════════ -->
+  <article class="story">
+    <div class="story-meta">
+      <span class="tag migracao">Migração</span>
+      <span class="story-date">7 abr 2026 · SVT / TT / Expressen</span>
+    </div>
+    <h2>Fim da residência permanente para refugiados: o governo envia projeto ao Conselho Legislativo</h2>
+
+    <div class="story-body">
+      <p>
+        Na segunda-feira de Páscoa, o governo sueco enviou ao Lagrådet — o órgão que verifica se as leis são constitucionais antes de irem ao Riksdag — a proposta para acabar com o <em>permanent uppehållstillstånd</em> (PUT) como destino possível para quem chega ao país por asilo. Se aprovada, a lei entra em vigor em 12 de julho de 2026.
+      </p>
+      <p>
+        A lógica do projeto é direta: quem é reconhecido como refugiado, protegido subsidiário ou reassentado (chamados de "kvotflyktingar") passará a receber apenas um visto temporário renovável — chamado tecnicamente de <em>tidsbegränsat uppehållstillstånd</em>. A porta para o PUT fecha. Já hoje a maioria dos solicitantes de asilo começa com visto temporário, mas havia a possibilidade de pedir permanência depois de certo tempo. É exatamente essa possibilidade que o projeto elimina.
+      </p>
+      <p>
+        O ministro da migração Johan Forssell (M) apresentou a medida como parte de um "paradigmskifte" — uma mudança de paradigma — na política migratória sueca. A ideia, disse ele, é aproximar as regras suecas ao mínimo exigido pelo pacto de migração e asilo da União Europeia, abandonando o que o governo chama de generosidade excessiva do sistema anterior.
+      </p>
+
+      <div class="pull">
+        "O governo está realizando uma mudança de paradigma na política migratória sueca. Para criar melhores condições de integração e reduzir o exclusão social, a imigração de asilo para a Suécia precisa diminuir." — Johan Forssell, ministro da migração (M), comunicado oficial, 7 abr 2026
+      </div>
+
+      <p>
+        O mesmo pacote legislativo inclui outras mudanças: restrições ao direito de advogado público em casos de asilo, e a redução da idade mínima para coleta de digitais e fotografias no processo migratório — de 14 para 6 anos. Este último ponto passou menos despercebido, mas gerou críticas de organizações de direitos humanos.
+      </p>
+      <p>
+        Uma proposta paralela e mais radical — que previa revogar PUTs já concedidos a até 185.000 pessoas — está tecnicamente em suspensão, após ter recebido críticas devastadoras em fase de consulta. Juristas do Asylrättscentrum alertaram que a retroatividade violaria princípios básicos do direito administrativo sueco e possivelmente a Convenção dos Direitos da Criança. Os próprios partidos do Acordo de Tidö estão em desacordo sobre esse segundo passo: Simona Mohamsson, dos Liberais (L), disse publicamente que não quer avançar com a revogação de PUTs já concedidos porque isso "cria desordem e grande insegurança para pessoas individualmente."
+      </p>
+      <p>
+        O Expressen reportou que o projeto foi publicado como lagrådsremiss no dia 6 de abril, com entrada em vigor prevista para 12 de julho — um prazo considerado apertado por especialistas, dados os trâmites ainda necessários no Riksdag. O calendário serve também a objetivos eleitorais: as eleições gerais suecas estão marcadas para 13 de setembro de 2026, e migração é o tema mais quente da campanha.
+      </p>
+    </div>
+
+    <div class="context">
+      <div class="context-header">Contexto &amp; Fontes Usadas</div>
+      <div class="context-body">
+        <p>
+          A Suécia mudou radicalmente sua política migratória desde a crise de refugiados de 2015–16, quando recebeu proporcionalmente mais solicitantes de asilo do que qualquer outro país europeu. A reação política levou a restrições progressivas desde 2016. Em 2022, o Acordo de Tidö selou a aliança entre os partidos de centro-direita (M, KD, L, C) e o SD (Sverigedemokraterna), de direita populista, com migração como principal moeda de troca. O SD não está no governo formalmente, mas sustenta a maioria.
+        </p>
+        <p>
+          Para imigrantes com visto de trabalho (arbetstillstånd) ou pesquisa — a categoria mais comum entre profissionais brasileiros na Suécia — esta proposta não tem impacto direto. A mudança atinge especificamente quem tem status de proteção internacional (asilo). Quem está em processo de naturalização e já tem PUT deve verificar individualmente seu status com a Migrationsverket.
+        </p>
+
+        <div class="sources">
+          <div class="sources-header">Fontes lidas diretamente nesta notícia</div>
+
+          <div class="source-row">
+            <span class="sbadge c"><span class="sdot" style="background:var(--center)"></span>SVT Nyheter</span>
+            <span class="source-note"><strong>Artigo lido: feed "Senaste nytt om valet 2026", 7 abr 2026.</strong> A TV pública cobriu o envio da lagrådsremiss de forma factual, com a informação da TT (agência nacional de notícias). Sem posicionamento editorial explícito sobre a medida.</span>
+          </div>
+
+          <div class="source-row">
+            <span class="sbadge cr"><span class="sdot" style="background:var(--center-right)"></span>Expressen</span>
+            <span class="source-note"><strong>Artigo lido via dagens.se (republica TT/Expressen): "Nytt lagförslag från 12 juli: Permanenta uppehållstillstånd ska försvinna", 7 abr 2026.</strong> Expressen é um tabloide de centro-direita liberal, historicamente próximo ao Partido Liberal. Em migração, tende a cobrir as reformas sem posição crítica pronunciada, exceto quando afetam princípios liberais individuais — como foi o caso da posição da sua editorialista sobre a revogação retroativa.</span>
+          </div>
+
+          <div class="source-row">
+            <span class="sbadge n"><span class="sdot" style="background:var(--neutral)"></span>Regeringen.se</span>
+            <span class="source-note"><strong>Comunicado lido: "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt", 7 abr 2026.</strong> Fonte primária com o texto completo da lagrådsremiss e declaração de Forssell. Institucional.</span>
+          </div>
+
+          <div class="source-row">
+            <span class="sbadge n"><span class="sdot" style="background:var(--neutral)"></span>Asylrättscentrum</span>
+            <span class="source-note"><strong>Análise lida: sobre a SOU 2025:99, publicada em jan 2026.</strong> Centro de direito de asilo, organização especializada de direitos humanos. Sem viés partidário, mas criticamente posicionada em relação a restrições ao direito de asilo. Usado aqui especificamente para a análise jurídica sobre retroatividade e a Convenção das Crianças.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+  <!-- ═══════════════════════════════════
+       NOTÍCIA 3: KÄRNVAPEN / SVT LIVEFEED
+  ═══════════════════════════════════ -->
+  <article class="story">
+    <div class="story-meta">
+      <span class="tag politica">Defesa</span>
+      <span class="story-date">8–9 abr 2026 · SVT Nyheter</span>
+    </div>
+    <h2>Crise dos armamentos nucleares: Kristersson acusa o S de "vacilação" em questão central de segurança</h2>
+
+    <div class="story-body">
+      <p>
+        A maior turbulência política da semana não envolveu eleições nem orçamento — envolveu bombas atômicas. O governo sueco iniciou conversas com a França sobre como a dissuasão nuclear francesa poderia cobrir a Suécia no âmbito da OTAN, uma mudança de postura histórica para um país que por décadas se manteve formalmente não-alinhado. O problema: o Partido Social-Democrata (S) parece ter prometido ao governo que não criticaria a iniciativa — e depois fez exatamente o oposto.
+      </p>
+      <p>
+        A líder do S, Magdalena Andersson, declarou publicamente que não sabia para onde as negociações levariam, e que tinha dúvidas sobre a linha adotada. Isso provocou a reação imediata do ministro da defesa Pål Jonsson (M), que afirmou ao SVT que o partido havia "vacilado" em questão de enorme importância estratégica.
+      </p>
+      <p>
+        — Recebemos pelo menos vários sinais diferentes do Socialdemokraterna nas últimas 96 horas. Isso é lamentável numa questão tão séria — disse Jonsson.
+      </p>
+
+      <div class="pull">
+        "Estou surpreso com essa vacilação. Tive a clara impressão de que os Social-Democratas não eram contra isso. Agora parece o oposto. É uma estranha instabilidade numa questão absolutamente central." — Statsminister Ulf Kristersson (M), 8 abr 2026
+      </div>
+
+      <p>
+        Kristersson confirmou ao SVT que conversou pessoalmente com Andersson sobre o assunto — além de apresentar a questão formalmente no Utrikesnämnden (Conselho de Relações Exteriores, órgão confidencial que reúne governo e oposição) e de ter falado também com o chefe das Forças Armadas. Sua interpretação foi de que havia entendimento tácito entre os partidos. O S contesta essa leitura.
+      </p>
+      <p>
+        O episódio é revelador da tensão crescente na campanha eleitoral. As eleições de setembro de 2026 serão as primeiras desde que a Suécia aderiu à OTAN em 2024, e a questão do papel do país na aliança atlântica — incluindo se a Suécia deveria sediar armamentos nucleares ou ficar coberta por eles via acordos com aliados — ainda não tem consenso entre os partidos. Para o governo, a linha dura no tema é trunfo eleitoral. Para o S, é terreno minado: a base histórica do partido tem resistência profunda ao armamento nuclear.
+      </p>
+    </div>
+
+    <div class="context">
+      <div class="context-header">Contexto &amp; Fontes Usadas</div>
+      <div class="context-body">
+        <p>
+          A Suécia aderiu à OTAN em março de 2024, após décadas de política oficial de não-alinhamento militar. A adesão foi amplamente apoiada pelos partidos de centro-direita e pelo SD, mas o S só deu seu apoio depois da invasão russa da Ucrânia em 2022. Parte da base social-democrata ainda tem reservas profundas — o partido governou o país por décadas com a não-participação em alianças militares como pilar identitário.
+        </p>
+        <p>
+          A questão dos armamentos nucleares vai um passo além da adesão à OTAN: envolve se a Suécia aceitaria que armas nucleares de aliados ficassem estacionadas em território sueco, ou se ficaria coberta por acordos de extensão da dissuasão sem presença física. A diferença é tanto militar quanto simbólica.
+        </p>
+
+        <div class="sources">
+          <div class="sources-header">Fontes lidas diretamente nesta notícia</div>
+          <div class="source-row">
+            <span class="sbadge c"><span class="sdot" style="background:var(--center)"></span>SVT Nyheter</span>
+            <span class="source-note"><strong>Livefeed "Senaste nytt om valet 2026", entradas de 8–9 abr 2026</strong>, lido diretamente. Inclui declarações de Kristersson (8 abr, 19:50) e de Pål Jonsson (8 abr, 14:20), com citações diretas dos políticos. O SVT cobriu sem posicionamento editorial, reportando os dois lados do conflito.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+  <!-- ═══════════════════════════════════
+       NOTÍCIA 4: KÄRNKRAFT / SVT LIVEFEED
+  ═══════════════════════════════════ -->
+  <article class="story">
+    <div class="story-meta">
+      <span class="tag politica">Energia</span>
+      <span class="story-date">9 abr 2026 · SVT Nyheter</span>
+    </div>
+    <h2>Governo abre nova investigação sobre papel do Estado na expansão da energia nuclear</h2>
+
+    <div class="story-body">
+      <p>
+        O governo de Kristersson e o SD (Sverigedemokraterna) anunciaram na quarta-feira a criação de uma nova comissão de investigação para examinar como o Estado sueco deve se envolver ativamente na expansão da energia nuclear no país. A notícia foi apresentada em coletiva conjunta por Ebba Busch (KD), ministra de energia e indústria, e Tobias Andersson (SD), presidente da comissão de assuntos econômicos do Riksdag.
+      </p>
+      <p>
+        O foco da investigação é concreto: analisar se o Estado deve criar uma nova empresa estatal que possa entrar como coproprietária nos projetos de usinas nucleares em planejamento. A comissão deve apresentar um relatório parcial em agosto e o relatório completo em dezembro de 2026 — portanto, já após as eleições de setembro, o que deu margem para críticas da oposição.
+      </p>
+      <p>
+        — Temos de garantir que haja eletricidade suficiente onde e quando for necessário — disse Ebba Busch na coletiva, segundo o SVT.
+      </p>
+
+      <div class="pull">
+        "Vamos analisar como o Estado pode fazer isso da melhor forma. Por exemplo, por meio de uma nova empresa estatal que possa entrar como coproprietária nos projetos nucleares em andamento." — Tobias Andersson (SD), presidente da comissão de economia do Riksdag
+      </div>
+
+      <p>
+        A energia nuclear voltou ao centro do debate sueco após décadas em que o país havia caminhado para o desligamento progressivo das usinas. A invasão da Ucrânia e o colapso do gasoduto Nord Stream em 2022 recolocaram a segurança energética no topo da agenda política. O governo atual reverteu a política de fechamento e agora planeja tanto manter as usinas existentes quanto construir novas capacidades de geração nuclear — uma posição que tem o apoio do SD mas gerou resistência do Partido Verde (MP) e divisões no Centerpartiet.
+      </p>
+    </div>
+
+    <div class="context">
+      <div class="context-header">Contexto &amp; Fontes Usadas</div>
+      <div class="context-body">
+        <p>
+          A Suécia operou reatores nucleares desde os anos 1970. Em 1980, após o acidente de Three Mile Island nos EUA, um referendo decidiu pelo desligamento gradual das usinas — decisão que foi sendo adiada por décadas. Em 2022, o governo Kristersson formalmente reverteu o curso: a meta agora é expandir a capacidade nuclear. A empresa estatal Vattenfall está entre as candidatas naturais a liderar projetos, mas há debate sobre quanto o Estado deve se envolver financeiramente em novos empreendimentos privados.
+        </p>
+        <p>
+          O anúncio da investigação antes das eleições tem leitura eleitoral clara: nuclear é tema em que os partidos do Tidö (especialmente KD e SD) têm vantagem de mensagem sobre a oposição, que é mais dividida. O MP (Miljöpartiet) é explicitamente contra; o S tem posição ambígua; o C tende a aceitar nuclear existente mas resiste a novos.
+        </p>
+
+        <div class="sources">
+          <div class="sources-header">Fontes lidas diretamente nesta notícia</div>
+          <div class="source-row">
+            <span class="sbadge c"><span class="sdot" style="background:var(--center)"></span>SVT Nyheter</span>
+            <span class="source-note"><strong>Livefeed "Senaste nytt om valet 2026", entrada de 9 abr 2026 (10:16)</strong>, lido diretamente. Inclui transcrição das declarações de Ebba Busch (KD) e Tobias Andersson (SD) na coletiva de imprensa. Cobertura factual, sem análise editorial.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+  <!-- ═══════════════════════════════════
+       NOTÍCIA 5: OPINION / MORGONTIDNINGEN
+  ═══════════════════════════════════ -->
+  <article class="story">
+    <div class="story-meta">
+      <span class="tag politica">Eleições 2026</span>
+      <span class="story-date">abril 2026 · Morgontidningen</span>
+    </div>
+    <h2>Pesquisas eleitorais: oposição mantém vantagem de 33 cadeiras — e os Liberais ameaçam soterrar o governo</h2>
+
+    <div class="story-body">
+      <p>
+        Com cinco meses para as eleições de 13 de setembro de 2026, o quadro nas pesquisas é relativamente estável — mas com uma bomba-relógio no bloco governista. A média ponderada de quatro institutos (Verian/SVT, Novus, Demoskop e Indikator/SR), compilada pelo portal Morgontidningen, coloca a oposição (S + V + C + MP) em 52,1% das intenções de voto, contra 45,9% dos partidos do Tidö (M + KD + L + SD).
+      </p>
+      <p>
+        Traduzido em cadeiras no Riksdag de 349 lugares, isso daria 191 à oposição contra 158 ao governo atual — uma vantagem de 33 mandatos e uma maioria confortável para Magdalena Andersson (S) formar governo. No pleito de 2022, o Tidö venceu por apenas três cadeiras.
+      </p>
+      <p>
+        O fator mais explosivo é o Partido Liberal (L). Três dos quatro institutos colocam o L abaixo de 4% — o threshold necessário para ter representação no Riksdag. Com 2,6% na média, o partido veria seus cerca de 190.000 votos simplesmente desaparecerem do cálculo de distribuição de cadeiras, sem transferência a nenhum outro partido. O efeito prático: o bloco governista perderia de uma vez os 16 mandatos que o L obteve em 2022, reduzindo sua bancada de 176 para 158.
+      </p>
+
+      <div class="pull">
+        "No voto de 2022, o Tidö venceu com três cadeiras de margem. Agora, só o colapso do L já custaria ao governo mais de uma dezena de mandatos."
+      </div>
+
+      <p>
+        A única exceção é o instituto Demoskop, que deu ao L 4,5% — acima da barreira — após a virada da presidente do partido, Simona Mohamsson, que em março anunciou abertura para incluir o SD em uma eventual coalizão de governo. A mudança de posição abalou o partido internamente, mas pode ter atraído eleitores de direita moderada. Os outros três institutos, porém, não captaram esse efeito de forma estatisticamente significativa.
+      </p>
+      <p>
+        No campo da liderança, Magdalena Andersson lidera com 43% de "alto grau de confiança" entre os eleitores, contra 36% de Kristersson e 29% de Jimmie Åkesson (SD). Uma complicação para o Tidö: o SD é hoje maior que o M em todas as pesquisas (20,9% vs 17,4%), e Åkesson sinalizou que pretende reivindicar o posto de primeiro-ministro caso o bloco vença — embora também tenha dito que poderia ceder o cargo a Kristersson. A questão ainda não está resolvida dentro do bloco.
+      </p>
+    </div>
+
+    <div class="context">
+      <div class="context-header">Contexto &amp; Fontes Usadas</div>
+      <div class="context-body">
+        <p>
+          O sistema eleitoral sueco usa representação proporcional com barreira de 4% nacional (ou 12% em pelo menos um distrito eleitoral). Partidos abaixo da barreira não recebem nenhum mandato e seus votos são descartados do cálculo — o que torna a situação do L especialmente perigosa para o bloco governista. Em 2018, o SD ficou abaixo dos limites de coalizão aceitáveis para os outros partidos, gerando meses de crise de formação de governo. Em 2022, o Tidö resolveu isso incluindo o SD formalmente como partido de sustentação.
+        </p>
+        <p>
+          O C (Centerpartiet) aparece em 5,8% na média, suficientemente acima da barreira, mas com tendência de perda de eleitores para o S. Isso é paradoxal: o C está na oposição, mas seus eleitores migrando para o S fortalecem o bloco do S. A liderança do C, Elisabeth Thand Ringqvist, posicionou o partido como força de centro independente, crítica tanto do SD quanto da esquerda.
+        </p>
+
+        <div class="sources">
+          <div class="sources-header">Fontes lidas diretamente nesta notícia</div>
+          <div class="source-row">
+            <span class="sbadge cl"><span class="sdot" style="background:var(--center-left)"></span>Morgontidningen</span>
+            <span class="source-note"><strong>Artigo lido diretamente: "Sammanvägning av opinionsmätningar inför valet 2026", atualizado em abril 2026.</strong> Portal sueco independente de análise política, sem financiamento corporativo. Metodologia transparente: ponderação por data e tamanho amostral, com exclusão de institutos com painéis auto-selecionados. Posicionamento leve de centro-esquerda no tom editorial, mas os dados são baseados nos mesmos institutos que alimentam SVT, DN e SR. A análise dos cenários (Andersson, Kristersson, Åkesson) é redacional, não dos institutos.</span>
+          </div>
+          <div class="source-row">
+            <span class="sbadge c"><span class="sdot" style="background:var(--center)"></span>SVT Nyheter / Verian</span>
+            <span class="source-note">Os dados do Verian/Sifo foram confirmados via livefeed do SVT. O SVT publica mensalmente a väljarbarometer encomendada ao instituto Verian — uma das pesquisas mais robustas metodologicamente, com amostra aleatória de ~3.000 entrevistados.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+  <footer class="footer">
+    <div class="footer-orn">— ✦ —</div>
+    <p>
+      Digest Sueco é uma curadoria de notícias da Suécia<br>
+      traduzidas e contextualizadas em português a partir de fontes suecas.<br><br>
+      Fontes desta edição: SVT Nyheter (lidas diretamente), Regeringen.se,<br>
+      Morgontidningen, Asylrättscentrum e Expressen/TT.<br>
+      Os posicionamentos políticos são baseados no Reuters Institute<br>
+      Digital News Report e no Nordicom Media Trends (Universidade de Gotemburgo).<br><br>
+      <strong>Göteborg · 11 de abril de 2026</strong>
+    </p>
+
+    <!-- GMAIL SEND BLOCK -->
+    <div class="send-block">
+      <div class="send-label">Enviar esta edição por email</div>
+      <div class="send-row">
+        <input
+          type="email"
+          id="recipientInput"
+          class="send-input"
+          placeholder="email@exemplo.com  (separe vários com vírgula)"
+        />
+        <button class="send-btn" onclick="openGmail()">
+          Abrir no Gmail ↗
+        </button>
+      </div>
+      <div class="send-hint">Abre um rascunho no Gmail já preenchido. Você só clica em Enviar.</div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+function openGmail() {
+  const raw = document.getElementById('recipientInput').value.trim();
+  const to = raw || '';
+
+  const subject = encodeURIComponent('Digest Sueco · 11 de abril de 2026');
+
+  // Build plain-text summary of all stories
+  const stories = document.querySelectorAll('.story');
+  let body = 'DIGEST SUECO · 11 de abril de 2026\n';
+  body += 'Notícias políticas da Suécia em português\n';
+  body += '─────────────────────────────────────────\n\n';
+
+  stories.forEach((story, i) => {
+    const tag  = story.querySelector('.tag')  ? story.querySelector('.tag').innerText  : '';
+    const date = story.querySelector('.story-date') ? story.querySelector('.story-date').innerText : '';
+    const h2   = story.querySelector('h2')   ? story.querySelector('h2').innerText   : '';
+    const paras = story.querySelectorAll('.story-body p');
+    let text = '';
+    paras.forEach(p => { text += p.innerText + '\n\n'; });
+
+    body += (i + 1) + '. [' + tag + '] ' + date + '\n';
+    body += h2 + '\n\n';
+    body += text.trim() + '\n\n';
+    body += '─────────────────────────────────────────\n\n';
+  });
+
+  body += 'Gerado via Digest Sueco · fontes em sueco lidas diretamente.';
+
+  const encoded = encodeURIComponent(body);
+  const url = 'https://mail.google.com/mail/?view=cm&fs=1'
+    + (to ? '&to=' + encodeURIComponent(to) : '')
+    + '&su=' + subject
+    + '&body=' + encoded;
+
+  window.open(url, '_blank');
+}
+
+// Allow pressing Enter in the input field
+document.getElementById('recipientInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') openGmail();
+});
+</script>
+
+<style>
+  .send-block {
+    margin-top: 36px;
+    padding: 22px 24px;
+    background: var(--paper-dark);
+    border: 1px solid var(--divider);
+    border-radius: 4px;
+    text-align: left;
+  }
+
+  .send-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .send-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .send-input {
+    flex: 1;
+    min-width: 220px;
+    background: var(--paper-mid);
+    border: 1px solid var(--divider);
+    border-radius: 3px;
+    color: var(--ink);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    padding: 9px 12px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .send-input:focus {
+    border-color: var(--gold);
+  }
+
+  .send-input::placeholder {
+    color: var(--muted);
+  }
+
+  .send-btn {
+    background: var(--gold);
+    color: #16130e;
+    border: none;
+    border-radius: 3px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    padding: 9px 18px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.15s;
+  }
+
+  .send-btn:hover { opacity: 0.85; }
+
+  .send-hint {
+    margin-top: 9px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+</style>
+</body>
+</html>

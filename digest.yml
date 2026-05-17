@@ -6,7 +6,7 @@ on:
     - cron: '0 6 * * 1'
     # Toda quinta-feira às 07:00 CET (06:00 UTC)
     - cron: '0 6 * * 4'
-# Permite rodar manualmente pela interface do GitHub Actions
+# Permite rodar manualmente pela interface do GitHub Actions agora
 workflow_dispatch:
 
 permissions:
